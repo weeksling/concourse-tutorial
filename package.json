@@ -30,7 +30,8 @@
       "@semantic-release/git"
     ],
     "prepare": [
-      "@semantic-release/git"
+      "@semantic-release/git",
+      "@semantic-release/npm"
     ],
     "publish": [
       "@semantic-release/github"
