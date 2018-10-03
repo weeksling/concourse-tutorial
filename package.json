@@ -1,0 +1,47 @@
+{
+  "name": "concourse-tutorial",
+  "version": "1.0.0",
+  "description": "Learn to use https://concourse-ci.org with this linear sequence of tutorials. Learn each concept that builds on the previous concept.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weeksling/concourse-tutorial"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weeksling/concourse-tutorial/issues"
+  },
+  "homepage": "https://github.com/weeksling/concourse-tutorial#readme",
+  "devDependencies": {
+    "semantic-release": "^15.9.16"
+  },
+  "release": {
+    "getLastRelease": "last-release-git",
+    "verifyConditions": [
+      "@semantic-release/github",
+      "@semantic-release/git"
+    ],
+    "prepare": [
+      "@semantic-release/git"
+    ],
+    "publish": [
+      "@semantic-release/github"
+    ],
+    "pkgRoot": "dist",
+    "assets": [
+      "package.json",
+      "npm-shrinkwrap.json"
+    ]
+  },
+  "dependencies": {
+    "@semantic-release/git": "^7.0.4"
+  }
+}
